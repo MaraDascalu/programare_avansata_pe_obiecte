@@ -1,10 +1,10 @@
 package pao.proiect;
 
 public class Actor {
-    String nume;
-    String prenume;
-    String numeDeScena;
-    int aniDeExperienta;
+    private String nume;
+    private String prenume;
+    private String numeDeScena;
+    private int aniDeExperienta;
 
     public Actor(String nume, String prenume, String numeDeScena, int aniDeExperienta) {
         this.nume = nume;

@@ -6,5 +6,6 @@ public enum Genul {
     MONOLOG,
     FANTASTIC,
     ISTORIC,
-    MODERNIST
+    MODERNIST,
+    ANIMATIE
 }

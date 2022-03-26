@@ -2,9 +2,9 @@ package pao.proiect;
 
 public class Locatie {
 
-    String denumire;
-    String teatru;
-    int capacitateMaxima;
+    private String denumire;
+    private String teatru;
+    private int capacitateMaxima;
 
     public Locatie(String denumire, String teatru ,int capacitateMaxima) {
         this.denumire = denumire;
@@ -23,4 +23,14 @@ public class Locatie {
     public int getCapacitateMaxima() {
         return capacitateMaxima;
     }
+
+    @Override
+    public String toString() {
+        return "Locatie{" +
+                "denumire='" + denumire + '\'' +
+                ", teatru='" + teatru + '\'' +
+                ", capacitateMaxima=" + capacitateMaxima +
+                '}';
+    }
+
 }

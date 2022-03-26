@@ -1,10 +1,10 @@
 package pao.proiect;
 
 public class Client {
-    String nume;
-    String prenume;
-    String numarDeTelefon;
-    String email;
+    protected String nume;
+    protected String prenume;
+    protected String numarDeTelefon;
+    protected String email;
 
     public Client(String nume, String prenume, String numarDeTelefon, String email) {
         this.nume = nume;

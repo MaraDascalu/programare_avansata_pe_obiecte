@@ -1,9 +1,9 @@
 package pao.proiect;
 
 public class Bilet {
-    int id;
-    Spectacol spectacol;
-    Client client;
+    private int id;
+    private Spectacol spectacol;
+    private Client client;
 
     public Bilet(int id, Spectacol spectacol, Client client) {
         this.id = id;
