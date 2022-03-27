@@ -1,7 +1,7 @@
 package pao.proiect;
 
 public class ClientFidel extends Client{
-    private int discount;
+    private float discount;
 
     public ClientFidel(String nume, String prenume, String numarDeTelefon, String email, int discount) {
         super(nume, prenume, numarDeTelefon, email);
@@ -13,7 +13,8 @@ public class ClientFidel extends Client{
         this.discount = discount;
     }
 
-    public int getDiscount() {
+    @Override
+    public float getDiscount() {
         return discount;
     }
 }

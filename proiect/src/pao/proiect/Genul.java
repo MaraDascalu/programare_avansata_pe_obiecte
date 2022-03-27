@@ -7,5 +7,7 @@ public enum Genul {
     FANTASTIC,
     ISTORIC,
     MODERNIST,
-    ANIMATIE
+    ANIMATIE,
+    DRAGOSTE,
+    TRAGEDIE
 }

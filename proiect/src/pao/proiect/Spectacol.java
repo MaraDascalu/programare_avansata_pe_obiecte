@@ -2,6 +2,8 @@ package pao.proiect;
 
 import java.time.LocalTime;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Objects;
 
 public class Spectacol {
 
@@ -14,9 +16,10 @@ public class Spectacol {
     private int pret;
     private Genul gen;
 
-    public Spectacol(String denumire, int durata, Locatie locatie, int pret, Genul gen) {
+    public Spectacol(String denumire, LocalTime oraInceput, int durata, Locatie locatie, int pret, Genul gen) {
         this.denumire = denumire;
         this.durata = durata;
+        this.oraInceput = oraInceput;
         this.numarBileteVandute = 0;
         this.locatie = locatie;
         this.actori = new Actor[15];
@@ -50,6 +53,10 @@ public class Spectacol {
 
     public Genul getGen() {
         return gen;
+    }
+
+    public LocalTime getOraInceput() {
+        return oraInceput;
     }
 
     public void setDenumire(String denumire) {
@@ -93,5 +100,24 @@ public class Spectacol {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Spectacol)) return false;
+        Spectacol spectacol = (Spectacol) o;
+        return Objects.equals(getDenumire(), spectacol.getDenumire()) ;
+    }
 
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getDenumire(), getOraInceput(), getDurata(), getNumarBileteVandute(), getLocatie(), getPret(), getGen());
+        result = 31 * result + Arrays.hashCode(getActori());
+        return result;
+    }
+}
+
+class SpectacolComparator implements Comparator<Spectacol> {
+    public int compare (Spectacol s1, Spectacol s2){
+        return s1.getOraInceput().getHour() - s2.getOraInceput().getHour();
+    }
 }

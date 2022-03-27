@@ -1,12 +1,12 @@
 package pao.proiect;
 
 public class Bilet {
-    private int id;
+    private int id = 1;
     private Spectacol spectacol;
     private Client client;
 
-    public Bilet(int id, Spectacol spectacol, Client client) {
-        this.id = id;
+    public Bilet( Spectacol spectacol, Client client) {
+        this.id++;
         this.spectacol = spectacol;
         this.client = client;
     }

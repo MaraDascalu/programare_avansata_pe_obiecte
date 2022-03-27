@@ -6,6 +6,8 @@ public class Locatie {
     private String teatru;
     private int capacitateMaxima;
 
+    public Locatie(){}
+
     public Locatie(String denumire, String teatru ,int capacitateMaxima) {
         this.denumire = denumire;
         this.teatru = teatru;
